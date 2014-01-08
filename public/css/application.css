@@ -1,0 +1,36 @@
+.container{
+  font-family: 'PT Sans Caption', sans-serif;
+  width: 100%;
+}
+
+.welcome{
+  padding: 100px 0;
+  background: #ff7a1b; /*orange color*/
+  color: blue;
+  text-align: center;
+}
+
+.row.welcome li#cycle-here{
+  margin-right: 150px;
+}
+
+.row.welcome .btn{
+  padding: 38px 0;
+  height: 100px;
+  width: 250px;
+  border: 1px white solid;
+}
+
+.cycle{
+  padding-bottom: 400px;
+  background: #166039; /*green color*/
+  height: 50px;
+  color: red;
+}
+
+.instruct{
+  padding-bottom: 400px;
+  background: #ff7a1b;
+  height: 50px;
+  color: green;
+}
