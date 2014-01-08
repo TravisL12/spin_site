@@ -23,12 +23,14 @@
 
 .cycle{
   padding-bottom: 400px;
+
   height: 50px;
   color: red;
 }
 
 .instruct{
   padding-bottom: 400px;
+
   height: 50px;
   color: green;
 }
