@@ -30,7 +30,6 @@
 
 .cycle {
   padding-bottom: 400px;
-
   background: #166039;
   /*green color*/
   height: 50px;
@@ -38,6 +37,6 @@
 
 .instruct {
   padding-bottom: 400px;
-
+  background: #ff7a1b;
   height: 50px;
   color: green; }
