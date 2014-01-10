@@ -1,7 +1,4 @@
-.row.welcome .btn-primary{
-  background-color: #166039;
-}
-
-.row.welcome .btn-primary:hover{
-  background-color: #0f4327;
-}
+.row.welcome .btn-primary {
+  background-color: #166039; }
+  .row.welcome .btn-primary:hover {
+    background-color: #0f4327; }
