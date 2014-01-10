@@ -1,0 +1,55 @@
+.container{
+  font-family: 'PT Sans Caption', sans-serif;
+  width: 100%;
+}
+
+.welcome{
+  padding: 100px 0;
+  background: #ff7a1b; /*orange color*/
+  color: blue;
+  text-align: center;
+
+  @media(max-width: 500px){
+    padding: 40px 0;
+  }
+}
+
+.welcome {
+  ul{
+    padding: 0;
+  }
+
+  button+button{
+    margin-left: 10%;
+    @media(max-width: 500px){
+      margin-left: 0;
+    }
+  }
+
+  #cycle-here.btn{
+    @media(max-width: 500px){
+      margin: 0 0 40px 0;
+    }
+  }
+
+  .btn{
+    height: 100px;
+    width: 250px;
+    border: 1px white solid;
+    border-radius: 10px;
+  }
+}
+
+.cycle{
+  padding-bottom: 400px;
+  background: #166039; /*green color*/
+  height: 50px;
+  color: red;
+}
+
+.instruct{
+  padding-bottom: 400px;
+  background: #ff7a1b;
+  height: 50px;
+  color: green;
+}

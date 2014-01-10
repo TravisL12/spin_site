@@ -1,0 +1,51 @@
+.header{
+  padding: 5px;
+  height: auto;
+
+  div{
+    display: inline-block;
+  }
+
+  li,  ul{
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav{
+    float: right;
+    margin-top: 20px;
+    font-size: 20px;
+
+    ul{
+
+      li{
+        display: inline;
+        padding-right: 10px;
+      }
+
+      & > :last-child {
+        margin-right: 0 !important;
+      }
+
+    }
+  }
+}
+
+.logo{
+
+  img{
+    width: 250px;
+  }
+
+  ul{
+    vertical-align: middle;
+    font-size: 20px;
+    margin: 0;
+    display: inline-block;
+  }
+
+  li{
+    line-height: 20px;
+  }
+
+}

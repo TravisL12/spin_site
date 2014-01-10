@@ -1,0 +1,9 @@
+.row.welcome {
+  .btn-primary{
+    background-color: #166039;
+
+    &:hover{
+      background-color: #0f4327;
+    }
+  }
+}
