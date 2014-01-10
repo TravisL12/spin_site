@@ -28,8 +28,8 @@
       <div class="nav">
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Cyclists</a></li>
-          <li><a href="#">Instructors</a></li>
+          <li><a href="#cyclers">Cyclists</a></li>
+          <li><a href="#intructors">Instructors</a></li>
           <li><a href="#">Rides</a></li>
           <li><a href="#">FAQ</a></li>
         </ul>
@@ -38,14 +38,14 @@
     </div>
 
     <div class="row welcome">
-      <button class="btn btn-primary" id="cycle-here" name="Cyclists" type="submit" >Cyclists Here!</button>
-      <button class="btn btn-primary" id="instruc-here" name="Instructors" type="submit" >Instructors Here!</button>
+      <a href="#cyclers" class="btn btn-primary active" id="cycle-here" role="button">Cyclists Here!</a>
+      <a href="#intructors" class="btn btn-primary active" id="instruct-here" role="button">Instructors Here!</a>
     </div>
 
-    <div class="row cycle">Cyclists Info!</div>
-    <div class="row instruct">Instructors Info!</div>
+    <div id="cyclers" class="row cycle">Cyclists Info!</div>
+    <div id="intructors" class="row instruct">Instructors Info!</div>
 
   </div>
+  <script type="text/javascript" src="public/js/jquery-2.0.3.min.js"></script>
 </body>
-
 </html>

@@ -14,10 +14,12 @@
 
 .welcome ul {
   padding: 0; }
-.welcome button + button {
+.welcome a {
+  padding-top: 40px; }
+.welcome a.btn-primary + a.btn-primary {
   margin-left: 10%; }
   @media (max-width: 500px) {
-    .welcome button + button {
+    .welcome a.btn-primary + a.btn-primary {
       margin-left: 0; } }
 @media (max-width: 500px) {
   .welcome #cycle-here.btn {

@@ -18,7 +18,11 @@
     padding: 0;
   }
 
-  button+button{
+  a{
+    padding-top: 40px;
+  }
+
+  a.btn-primary+a.btn-primary{
     margin-left: 10%;
     @media(max-width: 500px){
       margin-left: 0;
