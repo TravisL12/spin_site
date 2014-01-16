@@ -12,7 +12,7 @@
       margin: 0; }
       .header nav ul li {
         display: inline;
-        padding-right: 10px; }
+        padding-right: 5px; }
         .header nav ul li a {
           color: #166039; }
       .header nav ul > :last-child {
