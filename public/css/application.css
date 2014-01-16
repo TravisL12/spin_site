@@ -8,9 +8,6 @@
   /*orange color*/
   color: blue;
   text-align: center; }
-  @media (max-width: 500px) {
-    .welcome {
-      padding: 40px 0; } }
 
 .welcome ul {
   padding: 0; }
@@ -18,12 +15,6 @@
   padding-top: 40px; }
 .welcome a.btn-primary + a.btn-primary {
   margin-left: 10%; }
-  @media (max-width: 500px) {
-    .welcome a.btn-primary + a.btn-primary {
-      margin-left: 0; } }
-@media (max-width: 500px) {
-  .welcome #cycle-here.btn {
-    margin: 0 0 40px 0; } }
 .welcome .btn {
   height: 100px;
   width: 250px;
@@ -42,3 +33,14 @@
   background: #FFD145;
   height: 50px;
   color: green; }
+
+@media (max-width: 799px) {
+  .welcome {
+    padding: 40px 150px; }
+    .welcome a.btn-primary + a.btn-primary {
+      margin-left: 0; }
+    .welcome #cycle-here.btn {
+      margin: 0 0 40px 0; } }
+@media (max-width: 480px) {
+  .welcome {
+    padding: 40px; } }
