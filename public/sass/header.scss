@@ -27,25 +27,28 @@
       }
     }
   }
+
+  .logo{
+
+    display: inline-block;
+    img{ width: 250px; }
+
+    ul{
+      vertical-align: middle;
+      font-size: 20px;
+      margin: 0;
+      display: inline-block;
+    }
+
+    li{ line-height: 20px; }
+  }
+
 }
 
-.logo{
-
-  display: inline-block;
-  img{
-    width: 250px;
-  }
-
-  ul{
-    vertical-align: middle;
-    font-size: 20px;
-    margin: 0;
-    display: inline-block;
-  }
-
-  li{
-    line-height: 20px;
-  }
+.footer{
+  padding: 30px 20px 10px 20px;
+  text-align: center;
+  img#logo{ width: 150px; }
 }
 
 // @Media Queries

@@ -14,7 +14,7 @@
 
 <body>
   <div class="container">
-    <div class="row header">
+    <div id="top" class="row header">
 
       <div class="logo">
         <img src="public/img/royo_logo_mid.png">
@@ -27,11 +27,11 @@
 
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#cyclers">Cyclists</a></li>
-          <li><a href="#intructors">Instructors</a></li>
-          <li><a href="#">Rides</a></li>
-          <li><a href="#">FAQ</a></li>
+          <li id="nav"><a href="#">Home</a></li>
+          <li id="nav"><a href="#cyclers">Cyclists</a></li>
+          <li id="nav"><a href="#intructors">Instructors</a></li>
+          <li id="nav"><a href="#">Rides</a></li>
+          <li id="nav"><a href="#">FAQ</a></li>
         </ul>
       </nav>
 
@@ -42,8 +42,87 @@
       <a href="#intructors" class="btn btn-primary active" id="instruct-here" role="button">Instructors Here!</a>
     </div>
 
-    <div id="cyclers" class="row cycle">Cyclists Info!</div>
-    <div id="intructors" class="row instruct">Instructors Info!</div>
+    <div id="cyclers" class="row section">
+      <h2>Cyclists Info!</h2>
+      <p class="content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat risus, ullamcorper ut ante non, ornare pharetra nulla. Vivamus sodales vehicula faucibus. Aenean a tincidunt massa, eget commodo nulla. Morbi sit amet commodo ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus ac risus ut ligula viverra ultrices. Aliquam consequat, tortor congue sodales auctor, arcu urna varius justo, et vestibulum metus velit non erat. Maecenas pharetra vehicula sapien, nec fringilla elit fermentum nec. Donec non blandit turpis. Pellentesque volutpat ante sapien, accumsan tempor velit semper sed.
+      </p>
+
+      <br>
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <label for="cyclist-email">Cyclist Email:</label>
+          <input type="email" class="form-control" placeholder="cyclist@royo.com">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+
+    </div>
+
+    <div id="instructors" class="row section">
+      <h2>Instructors Info!</h2>
+      <p class="content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat risus, ullamcorper ut ante non, ornare pharetra nulla. Vivamus sodales vehicula faucibus. Aenean a tincidunt massa, eget commodo nulla. Morbi sit amet commodo ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus ac risus ut ligula viverra ultrices. Aliquam consequat, tortor congue sodales auctor, arcu urna varius justo, et vestibulum metus velit non erat. Maecenas pharetra vehicula sapien, nec fringilla elit fermentum nec. Donec non blandit turpis. Pellentesque volutpat ante sapien, accumsan tempor velit semper sed.
+      </p>
+
+      <br>
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <label for="instructor-email">Instructor Email:</label>
+          <input type="email" class="form-control" placeholder="instructor@royo.com">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+
+    <div id="creative-commons" class="row section">
+      <h2>Creative Commons</h2>
+      <p class="content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat risus, ullamcorper ut ante non, ornare pharetra nulla. Vivamus sodales vehicula faucibus. Aenean a tincidunt massa, eget commodo nulla. Morbi sit amet commodo ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+      </p>
+
+      <div class="videos">
+        <div class="row">
+          <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/SPhcOskjsDs?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
+          </iframe>
+          <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/u6RcwB3XVts?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
+          </iframe>
+          <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/Y9Hr7_2C2xQ?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
+          </iframe>
+        </div>
+        <div class="row">
+          <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/3p4MZJsexEs?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
+          </iframe>
+          <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/cAdQy3uJg4M?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
+          </iframe>
+          <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/3L2me3ZsSgo?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="downloads" class="row section">
+      <h2>Ride Downloads</h2>
+      <p class="content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat risus, ullamcorper ut ante non, ornare pharetra nulla. Vivamus sodales vehicula faucibus. Aenean a tincidunt massa, eget commodo nulla. Morbi sit amet commodo ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+      </p>
+    </div>
+
+    <div id="faq" class="row section">
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <p class="content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat risus, ullamcorper ut ante non, ornare pharetra nulla. Vivamus sodales vehicula faucibus. Aenean a tincidunt massa, eget commodo nulla. Morbi sit amet commodo ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+      </p>
+    </div>
+
+
+    <div class="row footer">
+      <a href="#top">
+        <img id="logo" src="public/img/royo_logo_mid.png">
+        <p>Back to Top</p>
+      </a>
+    </div>
 
   </div>
   <script type="text/javascript" src="public/js/jquery-2.0.3.min.js"></script>

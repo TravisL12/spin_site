@@ -17,18 +17,23 @@
           color: #166039; }
       .header nav ul > :last-child {
         margin-right: 0; }
-
-.logo {
-  display: inline-block; }
-  .logo img {
-    width: 250px; }
-  .logo ul {
-    vertical-align: middle;
-    font-size: 20px;
-    margin: 0;
+  .header .logo {
     display: inline-block; }
-  .logo li {
-    line-height: 20px; }
+    .header .logo img {
+      width: 250px; }
+    .header .logo ul {
+      vertical-align: middle;
+      font-size: 20px;
+      margin: 0;
+      display: inline-block; }
+    .header .logo li {
+      line-height: 20px; }
+
+.footer {
+  padding: 30px 20px 10px 20px;
+  text-align: center; }
+  .footer img#logo {
+    width: 150px; }
 
 @media (max-width: 799px) {
   .header {
