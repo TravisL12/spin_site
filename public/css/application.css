@@ -30,6 +30,12 @@ h2 {
   width: 140px; }
 .form-group input {
   width: 290px; }
+  .form-group input.ng-pristine {
+    border: none; }
+  .form-group input.ng-dirty {
+    border: 1px solid red; }
+  .form-group input.ng-valid {
+    border: 1px solid blue; }
 
 #cyclers.row {
   background: #166039;
@@ -49,11 +55,13 @@ h2 {
 
 #downloads.row {
   background: #166039;
-  /*green color*/ }
+  /*green color*/
+  color: #ff7a1b; }
 
 #faq.row {
   background: #FFD145;
-  /*yellow color*/ }
+  /*yellow color*/
+  color: #166039; }
 
 @media (max-width: 799px) {
   .welcome {

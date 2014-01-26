@@ -26,10 +26,20 @@ h2{ margin: 10px 0; }
 
 .form-group{
   label{ width: 140px; }
-  input{ width: 290px; }
-}
+  input{
+    width: 290px;
+    &.ng-pristine {
+      border: none;
+    }
+    &.ng-dirty {
+      border: 1px solid red;
+    }
+    &.ng-valid {
+      border: 1px solid blue; }
+    }
+  }
 
-#cyclers.row{
+  #cyclers.row{
   background: #166039; /*green color*/
   color: red;
 }
@@ -49,10 +59,12 @@ h2{ margin: 10px 0; }
 
 #downloads.row{
   background: #166039; /*green color*/
+  color: #ff7a1b;
 }
 
 #faq.row{
   background: #FFD145; /*yellow color*/
+  color: #166039;
 }
 
 // @Media Queries

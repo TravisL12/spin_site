@@ -1,19 +1,21 @@
 <!DOCTYPE HTML>
 
-<html>
+<html ng-app='royoApp'>
 <head>
   <link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="public/css/application.css">
   <link rel="stylesheet" type="text/css" href="public/css/header.css">
   <link rel="stylesheet" type="text/css" href="public/css/bootstrap-override.css">
   <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Royo: Custom Spinning</title>
 </head>
 
 <body>
-  <div class="container">
+  <div class="container" ng-controller="royoController">
     <div id="top" class="row header">
 
       <div class="logo">
@@ -49,10 +51,10 @@
       </p>
 
       <br>
-      <form class="form-inline" role="form">
+      <form name="cyclist_form" novalidate class="form-inline" role="form" ng-submit="emailvalid(cyclist.email)">
         <div class="form-group">
-          <label for="cyclist-email">Cyclist Email:</label>
-          <input type="email" class="form-control" placeholder="cyclist@royo.com">
+          <label name="cyclist-email">Cyclist Email:</label>
+          <input type="email" name="email" class="form-control" placeholder="cyclist@royo.com" ng-model="cyclist.email" required />
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
@@ -68,10 +70,10 @@
       <br>
       <form class="form-inline" role="form">
         <div class="form-group">
-          <label for="instructor-email">Instructor Email:</label>
-          <input type="email" class="form-control" placeholder="instructor@royo.com">
+          <label name="instructor-email">Instructor Email:</label>
+          <input type="email" ng-model="instructor.email" class="form-control" placeholder="instructor@royo.com" required>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" ng-click="emailvalid(instructor.email)" class="btn btn-default">Submit</button>
       </form>
     </div>
 
@@ -87,12 +89,14 @@
           </iframe>
           <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/u6RcwB3XVts?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
           </iframe>
+        </div>
+        <div class="row">
           <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/Y9Hr7_2C2xQ?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
+          </iframe>
+          <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/3p4MZJsexEs?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
           </iframe>
         </div>
         <div class="row">
-          <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/3p4MZJsexEs?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
-          </iframe>
           <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/cAdQy3uJg4M?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
           </iframe>
           <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/3L2me3ZsSgo?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
@@ -126,5 +130,7 @@
 
   </div>
   <script type="text/javascript" src="public/js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="public/js/app.js"></script>
+  <script type="text/javascript" src="public/js/application.js"></script>
 </body>
 </html>
