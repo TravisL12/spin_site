@@ -2,12 +2,12 @@
 
 <html ng-app='royoApp'>
 <head>
+  <script type="text/javascript" src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
   <link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="public/css/application.css">
   <link rel="stylesheet" type="text/css" href="public/css/header.css">
   <link rel="stylesheet" type="text/css" href="public/css/bootstrap-override.css">
   <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption' rel='stylesheet' type='text/css'>
-  <script type="text/javascript" src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,95 +16,18 @@
 
 <body>
   <div class="container" ng-controller="royoController">
-    <div id="top" class="row header">
-
-      <div class="logo">
-        <img src="public/img/royo_logo_mid.png">
-
-        <ul id="logo-copy">
-          <li>Indoor Cycling</li>
-          <li>Music Videos</li>
-        </ul>
-      </div>
-
-      <nav>
-        <ul>
-          <li id="nav"><a href="#">Home</a></li>
-          <li id="nav"><a href="#cyclers">Cyclists</a></li>
-          <li id="nav"><a href="#instructors">Instructors</a></li>
-          <li id="nav"><a href="#">Rides</a></li>
-          <li id="nav"><a href="#">FAQ</a></li>
-        </ul>
-      </nav>
-
-    </div>
+    <navbar></navbar>
 
     <div class="row welcome">
       <a href="#cyclers" class="btn btn-primary active" id="cycle-here" role="button">Cyclists Here!</a>
       <a href="#instructors" class="btn btn-primary active" id="instruct-here" role="button">Instructors Here!</a>
     </div>
 
-    <div id="cyclers" class="row section">
-      <h2>Cyclists Info!</h2>
-      <p class="content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat risus, ullamcorper ut ante non, ornare pharetra nulla. Vivamus sodales vehicula faucibus. Aenean a tincidunt massa, eget commodo nulla. Morbi sit amet commodo ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus ac risus ut ligula viverra ultrices. Aliquam consequat, tortor congue sodales auctor, arcu urna varius justo, et vestibulum metus velit non erat. Maecenas pharetra vehicula sapien, nec fringilla elit fermentum nec. Donec non blandit turpis. Pellentesque volutpat ante sapien, accumsan tempor velit semper sed.
-      </p>
+    <cyclists></cyclists>
 
-      <br>
-      <form name="cyclist_form" novalidate class="form-inline" role="form" ng-submit="emailvalid(cyclist.email)">
-        <div class="form-group">
-          <label name="cyclist-email">Cyclist Email:</label>
-          <input type="email" name="email" class="form-control" placeholder="cyclist@royo.com" ng-model="cyclist.email" required />
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+    <instructors></instructors>
 
-    </div>
-
-    <div id="instructors" class="row section">
-      <h2>Instructors Info!</h2>
-      <p class="content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat risus, ullamcorper ut ante non, ornare pharetra nulla. Vivamus sodales vehicula faucibus. Aenean a tincidunt massa, eget commodo nulla. Morbi sit amet commodo ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus ac risus ut ligula viverra ultrices. Aliquam consequat, tortor congue sodales auctor, arcu urna varius justo, et vestibulum metus velit non erat. Maecenas pharetra vehicula sapien, nec fringilla elit fermentum nec. Donec non blandit turpis. Pellentesque volutpat ante sapien, accumsan tempor velit semper sed.
-      </p>
-
-      <br>
-      <form class="form-inline" role="form">
-        <div class="form-group">
-          <label name="instructor-email">Instructor Email:</label>
-          <input type="email" ng-model="instructor.email" class="form-control" placeholder="instructor@royo.com" required>
-        </div>
-        <button type="submit" ng-click="emailvalid(instructor.email)" class="btn btn-default">Submit</button>
-      </form>
-    </div>
-
-    <div id="creative-commons" class="row section">
-      <h2>Creative Commons</h2>
-      <p class="content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat risus, ullamcorper ut ante non, ornare pharetra nulla. Vivamus sodales vehicula faucibus. Aenean a tincidunt massa, eget commodo nulla. Morbi sit amet commodo ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-      </p>
-
-      <div class="videos">
-        <div class="row">
-          <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/SPhcOskjsDs?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
-          </iframe>
-          <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/u6RcwB3XVts?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
-          </iframe>
-        </div>
-        <div class="row">
-          <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/Y9Hr7_2C2xQ?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
-          </iframe>
-          <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/3p4MZJsexEs?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
-          </iframe>
-        </div>
-        <div class="row">
-          <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/cAdQy3uJg4M?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
-          </iframe>
-          <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/3L2me3ZsSgo?showinfo=0&autohide=1&modestbranding=1" allowfullscreen frameborder="0">
-          </iframe>
-        </div>
-      </div>
-
-    </div>
+    <creative-commons></creative-commons>
 
     <div id="downloads" class="row section">
       <h2>Ride Downloads</h2>
@@ -129,8 +52,12 @@
     </div>
 
   </div>
-  <script type="text/javascript" src="public/js/jquery-2.0.3.min.js"></script>
-  <script type="text/javascript" src="public/js/app.js"></script>
+  <script type="text/javascript" src="public/js/vendors/jquery-2.0.3.min.js"></script>
   <script type="text/javascript" src="public/js/application.js"></script>
+  <script type="text/javascript" src="public/js/email_form.js"></script>
+  <script type="text/javascript" src="public/js/cyclists.js"></script>
+  <script type="text/javascript" src="public/js/creativecommons.js"></script>
+  <script type="text/javascript" src="public/js/instructors.js"></script>
+  <script type="text/javascript" src="public/js/navbar.js"></script>
 </body>
 </html>
