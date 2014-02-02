@@ -5,10 +5,8 @@
       transclude: true,
       templateUrl: 'public/views/emailform.html',
       replace: true,
-      scope: {
-        userType: '=info'
-      },
-
+      scope: { userType: '=info' },
+      controller: 'royoController',
       link: function () {
         // body...
       }
