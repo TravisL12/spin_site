@@ -26,21 +26,61 @@ h2 {
 .section {
   padding: 10px 20px 20px 20px; }
 
-.form-group label {
-  width: 140px; }
-.form-group input {
-  width: 290px; }
-  .form-group input.ng-pristine {
-    border: none; }
-  .form-group input.ng-dirty {
-    border: 1px solid red; }
-  .form-group input.ng-valid {
-    border: 1px solid blue; }
+#email.row {
+  text-align: center;
+  background: #166039;
+  /*yellow color*/
+  color: white; }
+  #email.row .form-group p {
+    margin: 10px 0 0 0; }
+  #email.row .form-group label {
+    padding: 5px 10px; }
+    #email.row .form-group label#email {
+      text-align: center; }
+    #email.row .form-group label#cyclist, #email.row .form-group label#instructor {
+      border: 1px solid black;
+      position: relative; }
+  #email.row .form-group .form-control {
+    margin: 0 auto; }
+  #email.row .form-group button {
+    border-radius: 0;
+    margin-top: 10px;
+    width: 150px; }
+  #email.row .form-group input[type=radio] {
+    display: none; }
+    #email.row .form-group input[type=radio] + label {
+      width: 292px;
+      background: orange; }
+    #email.row .form-group input[type=radio] + label:hover {
+      background: #999; }
+    #email.row .form-group input[type=radio]:checked + label:before {
+      font-family: FontAwesome;
+      content: "\f00c";
+      position: absolute;
+      padding-top: 2px;
+      padding-left: 1px;
+      left: 60px;
+      bottom: 4px;
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      background: #166039;
+      margin-right: 10px; }
+    #email.row .form-group input[type=radio]:checked + label:after {
+      content: ""; }
+  #email.row .form-group input[type=email] {
+    width: 290px; }
+    #email.row .form-group input[type=email].ng-pristine {
+      border: none; }
+    #email.row .form-group input[type=email].ng-dirty {
+      border: 1px solid red; }
+    #email.row .form-group input[type=email].ng-valid {
+      border: 1px solid blue; }
 
 #cyclers.row {
   background: #166039;
   /*green color*/
-  color: red; }
+  color: white; }
 
 #instructors.row {
   background: #FFD145;
@@ -53,15 +93,10 @@ h2 {
   #creative-commons.row .videos {
     text-align: center; }
 
-#downloads.row {
+#faq.row {
   background: #166039;
   /*green color*/
   color: #ff7a1b; }
-
-#faq.row {
-  background: #FFD145;
-  /*yellow color*/
-  color: #166039; }
 
 @media (max-width: 799px) {
   .welcome {
@@ -69,7 +104,14 @@ h2 {
     .welcome a.btn-primary + a.btn-primary {
       margin-left: 0; }
     .welcome #cycle-here.btn {
-      margin: 0 0 40px 0; } }
+      margin: 0 0 40px 0; }
+
+  .form-group button {
+    margin: 0; }
+  .form-group input[type=radio] {
+    display: none; }
+    .form-group input[type=radio] + label {
+      margin: 0; } }
 @media (max-width: 480px) {
   .welcome {
     padding: 40px; } }

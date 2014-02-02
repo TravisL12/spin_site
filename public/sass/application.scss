@@ -24,24 +24,78 @@
 h2{ margin: 10px 0; }
 .section{ padding: 10px 20px 20px 20px; }
 
-.form-group{
-  label{ width: 140px; }
-  input{
-    width: 290px;
-    &.ng-pristine {
-      border: none;
+#email.row{
+  text-align: center;
+  background: #166039; /*yellow color*/
+  color: white;
+
+  .form-group{
+
+    p{ margin: 10px 0 0 0; }
+
+    label{
+      padding: 5px 10px;
+      &#email{ text-align: center; }
+      &#cyclist, &#instructor{
+        border: 1px solid black;
+        position: relative;
+      }
     }
-    &.ng-dirty {
-      border: 1px solid red;
+
+    .form-control{ margin: 0 auto; }
+    button{
+      border-radius: 0;
+      margin-top: 10px;
+      width: 150px;
     }
-    &.ng-valid {
-      border: 1px solid blue; }
+
+    input{
+
+      &[type=radio] {
+        display: none;
+
+        & + label{
+          width: 292px;
+          background: orange;
+        }
+
+        & + label:hover{ background: #999; }
+
+        &:checked{
+          & + label{
+            &:before{
+              font-family: FontAwesome;
+              content: "\f00c";
+              position: absolute;
+              padding-top: 2px;
+              padding-left: 1px;
+              left: 60px;
+              bottom: 4px;
+              width: 23px;
+              height: 23px;
+              border-radius: 50%;
+              background: #166039;
+              margin-right: 10px;
+            }
+            &:after{ content: "" }
+          }
+        }
+
+      }
+
+      &[type=email]{
+        width: 290px;
+        &.ng-pristine { border: none; }
+        &.ng-dirty { border: 1px solid red; }
+        &.ng-valid { border: 1px solid blue; }
+      }
     }
   }
+}
 
-  #cyclers.row{
+#cyclers.row{
   background: #166039; /*green color*/
-  color: red;
+  color: white;
 }
 
 #instructors.row{
@@ -57,14 +111,9 @@ h2{ margin: 10px 0; }
   }
 }
 
-#downloads.row{
+#faq.row{
   background: #166039; /*green color*/
   color: #ff7a1b;
-}
-
-#faq.row{
-  background: #FFD145; /*yellow color*/
-  color: #166039;
 }
 
 // @Media Queries
@@ -78,6 +127,17 @@ h2{ margin: 10px 0; }
     }
 
     #cycle-here.btn{ margin: 0 0 40px 0; }
+  }
+
+  .form-group{
+    button{ margin: 0; }
+
+    input{
+      &[type=radio] {
+        display: none;
+        & + label{ margin: 0; }
+      }
+    }
   }
 }
 
