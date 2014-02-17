@@ -16,18 +16,137 @@
 
 <body>
   <div class="container" ng-controller="royoController">
-    <navbar></navbar>
+
+    <div id="top" class="row header">
+
+      <div class="logo">
+        <img src="public/img/royo_logo_mid.png">
+
+        <ul id="logo-copy">
+          <li>Indoor Cycling</li>
+          <li>Music Videos</li>
+        </ul>
+      </div>
+
+      <nav>
+        <ul>
+          <li id="nav"><a href="#">Home</a></li>
+          <li id="nav"><a href="#cyclers">Cyclists</a></li>
+          <li id="nav"><a href="#instructors">Instructors</a></li>
+          <li id="nav"><a href="#">Rides</a></li>
+          <li id="nav"><a href="#">FAQ</a></li>
+        </ul>
+      </nav>
+
+    </div>
 
     <div class="row welcome">
       <a href="#cyclers" class="btn btn-primary active" id="cycle-here" role="button">Cyclists Here!</a>
       <a href="#instructors" class="btn btn-primary active" id="instruct-here" role="button">Instructors Here!</a>
     </div>
 
-    <cyclists></cyclists>
+    <div id="cyclers" class="row section">
+      <h2>Cyclists Info!</h2>
+      <p class="content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat risus, ullamcorper ut ante non, ornare pharetra nulla. Vivamus sodales vehicula faucibus. Aenean a tincidunt massa, eget commodo nulla. Morbi sit amet commodo ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus ac risus ut ligula viverra ultrices. Aliquam consequat, tortor congue sodales auctor, arcu urna varius justo, et vestibulum metus velit non erat. Maecenas pharetra vehicula sapien, nec fringilla elit fermentum nec. Donec non blandit turpis. Pellentesque volutpat ante sapien, accumsan tempor velit semper sed.
+      </p>
+      <br>
+    </div>
 
-    <instructors></instructors>
-    <email-form info="cyclist"></email-form>
-    <creative-commons></creative-commons>
+
+    <div id="instructors" class="row section">
+      <h2>Instructors Info!</h2>
+      <p class="content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat risus, ullamcorper ut ante non, ornare pharetra nulla. Vivamus sodales vehicula faucibus. Aenean a tincidunt massa, eget commodo nulla. Morbi sit amet commodo ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus ac risus ut ligula viverra ultrices. Aliquam consequat, tortor congue sodales auctor, arcu urna varius justo, et vestibulum metus velit non erat. Maecenas pharetra vehicula sapien, nec fringilla elit fermentum nec. Donec non blandit turpis. Pellentesque volutpat ante sapien, accumsan tempor velit semper sed.
+      </p>
+      <br>
+    </div>
+
+    <div id="email" class="row section">
+      <div ng-hide="email_success">
+        <h2>Enter Your Email to Download a Ride Today!</h2>
+        <form class="form-inline" role="form">
+          <fieldset class="form-group">
+
+            <input
+            name="email"
+            type="email"
+            class="form-control"
+            placeholder="cyclist@royo.com"
+            ng-model="rider.email" required />
+
+            <p>Are you a Cyclist or Instructor?</p>
+
+            <input
+            id="cyclist"
+            type="radio"
+            name="check"
+            required value="cyclist"
+            ng-model="rider.type">
+
+            <label id="cyclist" for="cyclist">Cyclist</label>
+            <br>
+
+            <input
+            id="instructor"
+            type="radio"
+            name="check"
+            required value="instructor"
+            ng-model="rider.type">
+
+            <label id="instructor" for="instructor">Instructor</label>
+            <br>
+
+            <input
+            class="btn btn-default"
+            type="submit"
+            name="subscribe"
+            value="Join Email List!"
+            ng-click="addPerson(rider.email,rider.type)">
+
+          </fieldset>
+        </form>
+      </div>
+
+      <div ng-show="email_success">
+        <h2>Thank you for Signing Up!</h2>
+      </div>
+    </div>
+
+    <div id="creative-commons" class="row section">
+      <h2>Creative Commons</h2>
+      <p class="content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat risus, ullamcorper ut ante non, ornare pharetra nulla. Vivamus sodales vehicula faucibus. Aenean a tincidunt massa, eget commodo nulla. Morbi sit amet commodo ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+      </p>
+
+      <div class="videos">
+        <div class="row">
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" ng-repeat="slide in slides" data-slide-to="0" ng-class="{active: slide == slides[0]}"></li>
+            </ol>
+
+            <div class="carousel-inner">
+              <div class="item" ng-repeat="slide in slides" ng-class="{active: slide == slides[0]}">
+                <img ng-src="{{slide.src}}">
+                <div class="carousel-caption">
+                  {{slide.title}}
+                </div>
+              </div>
+            </div>
+
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
 
     <div id="faq" class="row section">
       <h2>Frequently Asked Questions (FAQ)</h2>
@@ -47,15 +166,7 @@
   </div>
   <script type="text/javascript" src="public/js/vendors/jquery-2.0.3.min.js"></script>
   <script type="text/javascript" src="public/js/bootstrap.min.js"></script>
-  <script src="https://cdn.firebase.com/v0/firebase.js"></script>
   <script type="text/javascript" src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
-  <script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
   <script type="text/javascript" src="public/js/application.js"></script>
-  <script type="text/javascript" src="public/js/email_form.js"></script>
-  <script type="text/javascript" src="public/js/videocarousel.js"></script>
-  <script type="text/javascript" src="public/js/cyclists.js"></script>
-  <script type="text/javascript" src="public/js/creativecommons.js"></script>
-  <script type="text/javascript" src="public/js/instructors.js"></script>
-  <script type="text/javascript" src="public/js/navbar.js"></script>
 </body>
 </html>

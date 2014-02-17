@@ -1,30 +1,29 @@
 var royoApp = angular.module('royoApp', []);
 
-royoApp.controller('royoController', ['$scope', '$filter', function($scope, $filter) {
+royoApp.controller('royoController', ['$scope', '$filter', '$sce', function($scope, $filter, $sce) {
 
-  var MANDRILL_API_URL = "https://mandrillapp.com/api/1.0/messages/send.json";
+  var MANDRILL_API_URL  = "https://mandrillapp.com/api/1.0/messages/send.json";
 
-  $scope.cyclist = {type: "Cyclist", placehold: "cyclist@royo.com"}
+  $scope.slides = [
+  {title: 'Ride 1', src: "public/img/ride_through_oakland.png"},
+  {title: 'Ride 2', src: "public/img/just_need_ride.png"}
+  ]
 
   $scope.addPerson = function(email, type) {
     var data = {
       "key": "k9bpSuEP5O5asRVySeGc1A",
       "message": {
-        "html": "<p>Example HTML content</p>",
+        "html": "<p>Welcome Royo Rider type: " + type + "</p>",
         "text": "Example text content",
-        "subject": "example subject",
-        "from_email": "message.from_email@example.com",
-        "from_name": "Example Name",
+        "subject": type + " Rider",
+        "from_email": "DoNotReply@royorides.com",
+        "from_name": "Royo Rides",
         "to": [
         {
-          "email": "travis.lawrence12@gmail.com",
-          "name": "Recipient Name",
+          "email": email,
           "type": "to"
         }
-        ],
-        "headers": {
-          "Reply-To": "message.reply@example.com"
-        }
+        ]
       },
       "async": false,
       "ip_pool": "Main Pool"
@@ -37,7 +36,9 @@ royoApp.controller('royoController', ['$scope', '$filter', function($scope, $fil
     }else{
       $.post(MANDRILL_API_URL, data)
       .success(function(){
-        console.log('email sent!')
+        console.log('email sent!');
+        $scope.email_success = true;
+        $scope.$apply();
       })
       .fail(function(){
         console.log('email FAIL!')
